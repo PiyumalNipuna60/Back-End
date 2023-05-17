@@ -1,3 +1,6 @@
+import { config } from "dotenv";
+config();
+
 import express  from "express";
 import db from "mongoose";
 
@@ -5,10 +8,10 @@ const app=express();
 
 
 
-db.connect("mongodb+srv://nipuna:1234@test01.kxnbmvm.mongodb.net/?retryWrites=true&w=majority")
+db.connect(process.env.MONGO_DB_URL!)
 .then(()=>{
     console.log("Connected..!");
-    app.listen(5000,()=>{
+    app.listen(process.env.PORT,()=>{
         console.log("Server is running");
         
     })
