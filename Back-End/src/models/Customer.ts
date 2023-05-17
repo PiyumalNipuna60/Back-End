@@ -1,6 +1,10 @@
 import { Document, Schema, model } from "mongoose";
 
-
+interface ICustomer extends Document{
+   name:string;
+   address:string;
+   salary:number;
+}
 
 const CustomerSchema = new Schema(
   {
@@ -19,4 +23,4 @@ const CustomerSchema = new Schema(
   }
 );
 
-export const customer=model<>("Customer",CustomerSchema);
+export const customer=model<ICustomer>("Customer",CustomerSchema);
