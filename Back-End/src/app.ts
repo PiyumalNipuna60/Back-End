@@ -3,10 +3,11 @@ config();
 
 import express  from "express";
 import db from "mongoose";
+import routes from "./routes";
 
 const app=express();
 
-
+app.use("/",routes)
 
 db.connect(process.env.MONGO_DB_URL!)
 .then(()=>{
