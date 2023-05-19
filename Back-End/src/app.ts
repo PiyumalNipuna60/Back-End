@@ -1,13 +1,19 @@
 import { config } from "dotenv";
 config();
 
-import express  from "express";
+import express, { Request, Response }  from "express";
 import db from "mongoose";
 import routes from "./routes";
+import { error } from "console";
 
 const app=express();
 
-app.use("/",routes)
+app.use("/",routes);
+
+//Error mg Print karaganna
+app.use((error:Error,req:Request,res:Response)=>{
+   res.status(500).json({state:"Error",message:error});
+});
 
 db.connect(process.env.MONGO_DB_URL!)
 .then(()=>{
