@@ -21,4 +21,11 @@ export default class CustomerController{
         ):Promise<Response> => {
            return res;
       };
+
+      deleteCustomer:RequestHandler=async (
+        req:Request,
+        res:Response
+      ):Promise<Response> => {
+        return res;
+      }
 }
