@@ -22,6 +22,13 @@ updateItem:RequestHandler=async (
     res:Response
     ):Promise<Response> => {
       return res;
-}
+};
+
+deleteItem:RequestHandler=async (
+    req:Request,
+    res:Response
+    ):Promise<Response> => {
+      return res;
+};
 
 }
