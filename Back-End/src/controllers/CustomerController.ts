@@ -8,5 +8,10 @@ export default class CustomerController{
            return res;
       };
 
-
+      getAllCustomer:RequestHandler=async (
+        req:Request,
+        res:Response
+        ):Promise<Response> => {
+           return res;
+      }
 }
