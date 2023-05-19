@@ -14,6 +14,9 @@ export default class ItemRoutes{
     this.router.get("/api/v1/item",this.controller.getAllItem);
     this.router.put("/api/v1/item/:id",this.controller.updateItem);
     this.router.delete("/api/v1/item/:id",this.controller.deleteItem);
-  }
+  };
 
+  public getRouter = ():Router => {
+    return this.router;
+  };
 }

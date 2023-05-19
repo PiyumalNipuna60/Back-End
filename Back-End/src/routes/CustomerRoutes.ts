@@ -15,4 +15,8 @@ export default class CustomerRoutes{
       this.router.put("/api/v1/customer/:id",this.controller.updateCustomer);
       this.router.delete("/api/v1/customer/:id",this.controller.deleteCustomer);
    };
+
+   public getRouter = (): Router => {
+    return this.router;
+   };
 }
