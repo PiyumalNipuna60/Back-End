@@ -8,4 +8,14 @@ saveItem:RequestHandler=async (
     ):Promise<Response> => {
        return res;
 };
+
+
+getAllItem:RequestHandler=async (
+    req:Request,
+    res:Response
+    ):Promise<Response> => {
+       return res;
+};
+
+
 }
