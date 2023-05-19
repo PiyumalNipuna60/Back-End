@@ -17,5 +17,11 @@ getAllItem:RequestHandler=async (
        return res;
 };
 
+updateItem:RequestHandler=async (
+    req:Request,
+    res:Response
+    ):Promise<Response> => {
+      return res;
+}
 
 }
