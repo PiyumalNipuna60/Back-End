@@ -10,10 +10,10 @@ export default class CustomerRoutes{
    }
 
    private configRoutes = (): void => {
-      this.router.post("/api/v1/customer",this.controller.saveCustomer);
-      this.router.get("/api/v1/customer",this.controller.getAllCustomer);
-      this.router.put("/api/v1/customer/:id",this.controller.updateCustomer);
-      this.router.delete("/api/v1/customer/:id",this.controller.deleteCustomer);
+      this.router.post("/",this.controller.saveCustomer);
+      this.router.get("/",this.controller.getAllCustomer);
+      this.router.put("/:id",this.controller.updateCustomer);
+      this.router.delete("/:id",this.controller.deleteCustomer);
    };
 
    public getRouter = (): Router => {

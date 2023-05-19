@@ -10,10 +10,10 @@ export default class ItemRoutes{
   }
 
   private configRouter=():void => {
-    this.router.post("/api/v1/item",this.controller.saveItem);
-    this.router.get("/api/v1/item",this.controller.getAllItem);
-    this.router.put("/api/v1/item/:id",this.controller.updateItem);
-    this.router.delete("/api/v1/item/:id",this.controller.deleteItem);
+    this.router.post("/",this.controller.saveItem);
+    this.router.get("/",this.controller.getAllItem);
+    this.router.put("/:id",this.controller.updateItem);
+    this.router.delete("/:id",this.controller.deleteItem);
   };
 
   public getRouter = ():Router => {
